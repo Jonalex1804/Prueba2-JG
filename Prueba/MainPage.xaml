@@ -11,7 +11,26 @@
                TextColor="Black"
                x:Name="lblPhoneNumber"/>
 
-      
+        <Entry Placeholder="Número de teléfono"
+         x:Name="entPhoneNumber"
+         Keyboard="Numeric"/>
+
+        <Label Text="Seleccione el operador:"
+         FontSize="20"
+         TextColor="Black"
+         x:Name="lblOperator"/>
+
+        <Picker x:Name="pickerOperator">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Movistar</x:String>
+                    <x:String>Claro</x:String>
+                    <x:String>Personal</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+
     </VerticalStackLayout>
 
 </ContentPage>
