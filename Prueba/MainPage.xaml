@@ -23,12 +23,53 @@
         <Picker x:Name="pickerOperator">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>Movistar</x:String>
-                    <x:String>Claro</x:String>
-                    <x:String>Personal</x:String>
+                    <x:String>CLARO</x:String>
+                    <x:String>MOVISTAR</x:String>
+                    <x:String>CNT</x:String>
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
+
+        <Label Text="Seleccione el valor de la recarga:"
+         FontSize="20"
+         TextColor="Black"
+         x:Name="lblAmount"/>
+
+        <RadioButton Content="3 dólares" 
+               GroupName="RechargeAmount"
+               Value="3"
+               CheckedChanged="OnAmountChanged"/>
+        <RadioButton Content="5 dólares" 
+               GroupName="RechargeAmount"
+               Value="5"
+               IsChecked="True"
+               CheckedChanged="OnAmountChanged"/>
+        <RadioButton Content="10 dólares" 
+               GroupName="RechargeAmount"
+               Value="10"
+               CheckedChanged="OnAmountChanged"/>
+        
+        <RadioButton Content="15 dólares" 
+                GroupName="RechargeAmount"
+                Value="15"
+                CheckedChanged="OnAmountChanged"/>
+
+        <RadioButton Content="20 dólares" 
+                GroupName="RechargeAmount"
+                Value="20"
+                CheckedChanged="OnAmountChanged"/>
+
+        <Label x:Name="lblSelectedAmount"
+         Text="Usted ha solicitado una recarga de: 5 dólares"
+         FontSize="18"
+         TextColor="Black"/>
+
+        <Button Text="Recargar"
+          BackgroundColor="Green"
+          TextColor="White"
+          Clicked="OnRechargeClicked"/>
+
+
 
 
     </VerticalStackLayout>
